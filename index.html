@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Eslam Mohamed - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Fonts and Icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .jumbotron {
+      height: 550px;
+      margin-bottom: 0;
+    }
+
+    #home {
+      background: linear-gradient(-90deg, #062b0b, #5ddd6e);
+      padding-top: 80px;
+    }
+
+    #about {
+      margin-top: -30px;
+      background-color: white;
+    }
+
+    #portfolio {
+      background: linear-gradient(-90deg, #5ddd6e, #062b0b);
+    }
+
+    #contact {
+      margin-top: -20px;
+      background-color: white;
+    }
+
+    footer {
+      background-color: #062b0b;
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+
+    #code {
+      color: #fff;
+    }
+
+    .skills-icons {
+      font-size: 3em;
+      margin: 20px 0;
+    }
+
+    .skills-icons i {
+      margin: 10px;
+    }
+
+    .btn-custom {
+      background-color: #062b0b;
+      color: white;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background-color: #044d0e;
+      color: white;
+    }
+
+    .navbar-inverse {
+      background-color: #062b0b;
+      border-color: transparent;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+      color: white;
+    }
+
+    .navbar-inverse .navbar-nav > li.active > a,
+    .navbar-inverse .navbar-nav > li > a:hover {
+      background-color: #044d0e;
+      color: white;
+    }
+
+    .portfolio-item {
+      text-align: center;
+      margin-bottom: 30px;
+      display: inline-block;
+      width: 30%;
+      margin: 10px;
+      vertical-align: top;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      max-width: 150px;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    .portfolio-item h4,
+    .portfolio-item p {
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .portfolio-item .btn-custom {
+      margin-top: 20px;
+    }
+
+    .row.text-center {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 767px) {
+      .portfolio-item {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .jumbotron {
+        height: auto;
+        padding-top: 80px;
+      }
+
+      .navbar-inverse .navbar-nav {
+        text-align: center;
+      }
+
+      .skills-icons {
+        font-size: 2.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-target1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Eslam Mohamed</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-target1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Home Section -->
+<div class="jumbotron" id="home">
+  <h1 class="text-center" id="helloThere" style="margin-top: 20px; color:white;">
+    <i class="fa fa-code fa-5x" id="code" aria-hidden="true"></i> Hello There!
+  </h1>
+  <p class="text-center" id="introText" style="color:white;">
+    Welcome! My Name is Eslam Mohamed and I am a <strong>Flutter developer | Specialist in Clean & Responsive UI Design.</strong>
+  </p>
+  <div class="container text-center">
+    <a href="https://www.linkedin.com/in/eslam-mohamed-9ba442297/" target="_blank"><button class="btn btn-custom">LinkedIn</button></a>
+    <a href="https://github.com/esllamesso" target="_blank"><button class="btn btn-custom">GitHub</button></a>
+    <a href="https://www.freelancer.com/u/esllameso" target="_blank"><button class="btn btn-custom">Freelancer</button></a>
+  </div>
+</div>
+
+<!-- About Section -->
+<div class="jumbotron" id="about">
+  <h1 class="text-center"><i class="fa fa-bookmark" aria-hidden="true"></i> <strong>About Me</strong></h1>
+  <div class="container">
+    <h3><strong><i class="fa fa-book"></i> Bio</strong></h3>
+    <p>
+      I am a skilled mobile app developer proficient in Flutter and Java, with a strong background in UI design. I specialize in creating responsive and elegant user interfaces that enhance user experience and engagement. Whether you need a new app developed from scratch or improvements to an existing project, I'm here to help bring your ideas to life efficiently and effectively. Let's build something amazing together!
+    </p>
+    <h3><strong><i class="fa fa-check"></i> My Skills</strong></h3>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="skills-icons">
+          <i class="fab fa-java" style="font-size: 60px; color: #F8981D;"></i>
+        </div>
+        <p><strong>Java</strong></p>
+      </div>
+      <div class="col-md-4">
+        <div class="skills-icons">
+          <i class="fa fa-mobile" style="font-size: 60px;"></i>
+        </div>
+        <p><strong>Flutter</strong></p>
+      </div>
+      <div class="col-md-4">
+        <div class="skills-icons">
+          <i class="fa fa-laptop" style="font-size: 60px;"></i>
+        </div>
+        <p><strong>UI Design</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Portfolio Section -->
+<div class="jumbotron" id="portfolio">
+  <h1 class="text-center" style="color: white;"><i class="fa fa-briefcase" aria-hidden="true"></i> <strong>Portfolio</strong></h1>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 portfolio-item">
+        <img src="https://raw.githubusercontent.com/esllamesso/images/main/images/library.png" alt="Library App">
+        <h4>Library App</h4>
+        <p>A mobile application for managing library books.</p>
+        <a href="https://github.com/esllamesso/MotatweraLibrary" target="_blank" class="btn btn-custom">View Code</a>
+      </div>
+      
+      <div class="col-md-4 portfolio-item">
+        <img src="https://raw.githubusercontent.com/esllamesso/images/main/images/gameso.png" alt="Gaming Community">
+        <h4>Gaming Community</h4>
+        <p>A platform for gaming mods and save data sharing.</p>
+        <a href="https://github.com/esllamesso/GameEso-UI" target="_blank" class="btn btn-custom">View Design</a>
+      </div>
+
+      <div class="col-md-4 portfolio-item">
+        <img src="https://raw.githubusercontent.com/esllamesso/images/main/images/library.png" alt="UI Design">
+        <h4>UI Design for Library App</h4>
+        <p>User interface design focusing on clarity and UX.</p>
+        <a href="https://github.com/esllamesso/university-library-ui" target="_blank" class="btn btn-custom">View Design</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="jumbotron" id="contact">
+  <h1 class="text-center"><i class="fa fa-envelope" aria-hidden="true"></i> <strong>Contact</strong></h1>
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label>First Name:</label>
+        <input type="text" class="form-control" placeholder="First Name">
+      </div>
+      <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" class="form-control" placeholder="Last Name">
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" class="form-control" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label>Message:</label>
+        <textarea class="form-control" rows="4" placeholder="Your message"></textarea>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-custom"><strong>Submit</strong></button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <small style="color:#fff;">Design and coded by <a href="https://www.linkedin.com/in/eslam-mohamed-9ba442297/" target="_blank" style="color:#9fffbe;">Eslam Mohamed</a></small>
+</footer>
+
+<!-- JS Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
