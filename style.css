@@ -17,10 +17,10 @@ body {
 
 /* Toolbar Styling */
 .toolbar {
-  position: absolute;
+  position: fixed;
   top: 5%; /* التولبار سيظهر في المنتصف العمودي */
   left: 50%;
-  transform: translate(-50%, -50%); /* لتحريك التولبار تمامًا في المنتصف */
+  transform: translateX(-50%); /* لتحريك التولبار تمامًا في المنتصف */
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 100;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -29,6 +29,8 @@ body {
   display: flex;
   justify-content: center;
   width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .toolbar nav ul {
@@ -116,38 +118,29 @@ body {
   box-shadow: 0 0 20px #452358, 0 0 30px #452358; /* تكبير الظل */
 }
 
-/* أنيميشن الانبثاق */
-@keyframes popIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
 /* زر شفاف */
 .btn-outline {
   background: transparent;
   border: 2px solid white;
 }
 
-
 /* بقية الأقسام */
 #about {
+  padding-top: 25px;
   padding: 60px 20px;
   text-align: center;
 }
 
 #skills {
   padding: 60px 20px;
-  background-color: transparent;
+  background: transparent;
   color: white;
+  text-align: center;
+  border-radius: 20px;
 }
 
 .skills-container {
+  padding-top: 25px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
@@ -240,8 +233,6 @@ body {
   box-shadow: 0 0 30px #452358, 0 0 40px #452358;
 }
 
-
-
 #contact {
   padding: 60px 20px;
   text-align: center;
@@ -295,4 +286,72 @@ footer {
 
 footer p {
   font-size: 12px;
+}
+
+/* الـ Media Query للأجهزة الصغيرة (أقل من 768px) */
+@media screen and (max-width: 768px) {
+  .toolbar nav ul {
+    flex-direction: column; /* جعل العناصر تظهر عموديًا */
+    gap: 15px; /* تقليل المسافة بين العناصر */
+  }
+
+  .toolbar nav ul li a {
+    font-size: 14px; /* تقليص حجم الخط على الموبايل */
+    padding: 10px 20px; /* زيادة المسافة الداخلية للأزرار */
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr; /* جعل الـ Skills تظهر في عمود واحد */
+  }
+
+  .project-card {
+    width: 100%; /* جعل الكاردات تأخذ عرض الشاشة بالكامل */
+  }
+
+  .social-links {
+    gap: 10px; /* تقليص المسافة بين الأيقونات */
+  }
+
+  /* يمكن تقليص الـ Hero Section للتناسب مع حجم الشاشة */
+  .hero {
+    height: auto; /* تقليص ارتفاع الـ Hero على الشاشات الصغيرة */
+    padding: 50px 10px; /* تقليل المسافة الداخلية */
+  }
+
+  .hero .highlight {
+    font-size: 24px; /* تصغير الخط في الـ Hero */
+  }
+
+  .buttons .btn {
+    font-size: 14px; /* تصغير حجم الخط
+في الأزرار /
+padding: 10px 15px; / تقليص الـ padding للأزرار */
+}
+
+/* تكبير حجم الأيقونات على الموبايل /
+.social-links a {
+font-size: 20px; / حجم أصغر على الموبايل */
+}
+
+footer p {
+font-size: 10px; /* تصغير الخط في الفوتر */
+}
+
+/* الـ Media Query للأجهزة التي تقل عن 480px (أجهزة الجوال الصغيرة) /
+@media screen and (max-width: 480px) {
+.toolbar nav ul li a {
+font-size: 12px; / تقليص حجم النص أكثر */
+
+
+.hero .highlight {
+font-size: 20px; /* تصغير الخط في الـ Hero */
+}
+
+.btn {
+font-size: 12px; /* تصغير حجم الخط في الأزرار /
+padding: 8px 14px; / تقليص الـ padding */
+}
+
+.project-card img {
+width: 70%; /* تصغير الصورة أكثر */
 }
