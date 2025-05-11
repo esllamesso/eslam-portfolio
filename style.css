@@ -9,7 +9,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
-  background: #110214; /* Dark background */
+  background: #1c1c1c; 
   color: #fff;
   overflow-x: hidden;
   cursor: default;
@@ -18,23 +18,23 @@ body {
 /* Toolbar Styling */
 .toolbar {
   position: absolute;
-  top: 5%; /* التولبار سيظهر في المنتصف العمودي */
+  top: 5%;
   left: 50%;
-  transform: translate(-50%, -50%); /* لتحريك التولبار تمامًا في المنتصف */
+  transform: translateX(-50%); /* التعديل ليكون في المنتصف بشكل صحيح */
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 100;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 20px; /* حواف مدورة */
+  border-radius: 20px;
   padding: 10px 30px;
   display: flex;
   justify-content: center;
-  width: auto;
+  width: 90%; /* تعديل العرض ليبقى في حدود الشاشة */
 }
 
 .toolbar nav ul {
   display: flex;
-  justify-content: flex-start; /* التوزيع من اليمين لليسار */
-  gap: 20px;
+  justify-content: center; /* التوزيع في المنتصف */
+  gap: 15px;
   list-style: none;
 }
 
@@ -49,14 +49,13 @@ body {
 }
 
 .toolbar nav ul li a:hover {
-  color: #452358;
+  color: #9fffbe;
   transform: scale(1.1);
   background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 15px #452358;
-  animation: popIn 0.5s ease-out forwards; /* تأثير الانبثاق */
+  box-shadow: 0 0 15px #9fffbe;
+  animation: popIn 0.5s ease-out forwards;
 }
 
-/* أنيميشن الانبثاق */
 @keyframes popIn {
   0% {
     transform: scale(0.8);
@@ -82,65 +81,7 @@ body {
   border-radius: 20px;
 }
 
-.hero-content {
-  color: white;
-  z-index: 2;
-}
-
-.hero .highlight {
-  color: #7d469c;
-  text-shadow: 0 0 5px #452358, 0 0 10px #452358, 0 0 15px #452358;
-}
-
-.buttons {
-  margin-top: 20px;
-}
-
-.btn {
-  background: #360c42cc;
-  color: white;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #452358, 0 0 10px #452358, 0 0 15px #452358;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-/* تأثير الانبثاق عند المرور على البوتن */
-.btn:hover {
-  transform: scale(1.1);
-  animation: popIn 0.5s ease-out forwards; /* تأثير الانبثاق */
-  box-shadow: 0 0 20px #452358, 0 0 30px #452358; /* تكبير الظل */
-}
-
-/* أنيميشن الانبثاق */
-@keyframes popIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* زر شفاف */
-.btn-outline {
-  background: transparent;
-  border: 2px solid white;
-}
-
-
-/* بقية الأقسام */
-#about {
-  padding: 60px 20px;
-  text-align: center;
-}
-
+/* Skills Section */
 #skills {
   padding: 60px 20px;
   background-color: transparent;
@@ -149,7 +90,7 @@ body {
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* تعديل الأعمدة لتكون أكثر مرونة */
   gap: 20px;
 }
 
@@ -180,65 +121,25 @@ body {
   font-size: 12px;
 }
 
-#links {
-  padding: 60px 20px;
-  background: transparent;
-  color: white;
-  text-align: center;
-  border-radius: 20px;
+@media (max-width: 768px) {
+  .toolbar {
+    width: 90%; /* التولبار يصبح أضيق على الشاشات الصغيرة */
+    padding: 10px 20px;
+  }
+
+  .hero {
+    height: 80vh; /* تقليص حجم الهيرو على الموبايل */
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr; /* العمود الواحد على الموبايل */
+  }
+
+  .project-card img {
+    width: 80%; /* تصغير الصور في الكارد على الموبايل */
+  }
 }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social-links .btn {
-  background: #452358;
-  color: #ffffff;
-  padding: 8px 16px; /* تقليص حجم padding */
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px; /* تصغير حجم الخط */
-}
-
-.social-links .btn:hover {
-  background: #452358;
-  color: #ffffff;
-}
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.project-card {
-  background: #333;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #333, 0 0 20px #452358;
-  transition: transform 0.3s ease-in-out;
-  width: 90%;
-  max-width: 300px;
-  text-align: center; /* محاذاة الصور في المنتصف */
-}
-
-.project-card img {
-  width: 60%; /* تصغير حجم الصورة أكثر */
-  height: auto;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto; /* لضمان تمركز الصورة في منتصف الكارد */
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px #452358, 0 0 40px #452358;
-}
 
 
 
