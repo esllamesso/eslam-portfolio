@@ -18,7 +18,7 @@ body {
 /* Toolbar Styling */
 .toolbar {
   position: fixed;
-  top: 5%;
+  top: 0; /* تغيير المكان إلى أعلى الصفحة */
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.3);
@@ -28,16 +28,17 @@ body {
   padding: 15px 30px;
   display: flex;
   justify-content: center;
-  width: 90%; /* عرض 90% على الموبايل */
-  max-width: 400px; /* الحد الأقصى للعرض */
+  width: 90%;
+  max-width: 400px; 
   box-sizing: border-box;
   flex-wrap: wrap;
+  top: 5%;
 }
 
 .toolbar nav ul {
   display: flex;
   justify-content: center;
-  gap: 15px; /* تقليل المسافة بين الأزرار */
+  gap: 15px;
   list-style: none;
   flex-wrap: wrap;
   padding: 0;
@@ -53,12 +54,12 @@ body {
   color: white;
   font-size: 16px;
   font-weight: 500;
-  padding: 10px 25px; /* تأكيد المسافة الداخلية حول النص */
+  padding: 10px 25px; 
   transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
   border-radius: 5px;
   display: inline-block;
   cursor: pointer;
-  width: auto; /* التأكد من أن الأزرار قابلة للضغط بشكل كامل */
+  width: auto;
 }
 
 .toolbar nav ul li a:hover {
@@ -197,11 +198,11 @@ body {
 .social-links .btn {
   background: #452358;
   color: #ffffff;
-  padding: 8px 16px; /* تقليص حجم padding */
+  padding: 8px 16px; 
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px; /* تصغير حجم الخط */
+  font-size: 14px;
 }
 
 .social-links .btn:hover {
@@ -256,28 +257,28 @@ body {
 }
 
 .social-links a {
-    font-size: 30px; /* تكبير الأيقونات */
-    color: white; /* اللون الافتراضي */
+    font-size: 30px; 
+    color: white; 
     transition: transform 0.3s, color 0.3s;
 }
 
 .social-links a:hover {
-    transform: scale(1.2); /* تكبير الأيقونة عند التمرير */
+    transform: scale(1.2); 
 }
 
 /* Instagram */
 .social-links .instagram {
-    color: #E4405F; /* اللون الواقعي لإنستجرام */
+    color: #E4405F; 
 }
 
 /* Facebook */
 .social-links .facebook {
-    color: #3b5998; /* اللون الواقعي لفيسبوك */
+    color: #3b5998; 
 }
 
 /* X (تويتر سابقًا) */
 .social-links .x {
-    color: #1d9bf0; /* اللون الواقعي لX */
+    color: #1d9bf0; 
 }
 
 footer {
@@ -298,69 +299,67 @@ footer p {
 /* الـ Media Query للأجهزة الصغيرة (أقل من 768px) */
 @media screen and (max-width: 768px) {
   .toolbar nav ul {
-    flex-direction: row; /* جعل العناصر في صف واحد */
-    justify-content: center; /* التأكد من توزيع الأزرار بشكل جيد */
-    gap: 10px; /* تقليل المسافة بين العناصر */
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 10px; 
   }
 
   .toolbar nav ul li a {
-    font-size: 14px; /* تقليص حجم الخط على الموبايل */
-    padding: 8px 15px; /* تقليص المسافة الداخلية للأزرار */
+    font-size: 14px; 
+    padding: 8px 15px; 
   }
 
   .skills-container {
-    grid-template-columns: 1fr; /* جعل الـ Skills تظهر في عمود واحد */
+    grid-template-columns: 1fr; 
   }
 
   .project-card {
-    width: 100%; /* جعل الكاردات تأخذ عرض الشاشة بالكامل */
+    width: 100%; 
   }
 
   .social-links {
-    gap: 10px; /* تقليص المسافة بين الأيقونات */
+    gap: 10px; 
   }
 
-  /* يمكن تقليص الـ Hero Section للتناسب مع حجم الشاشة */
   .hero {
-    height: auto; /* تقليص ارتفاع الـ Hero على الشاشات الصغيرة */
-    padding: 50px 10px; /* تقليلي المسافة الداخلية */
+    height: auto; 
+    padding: 50px 10px; 
   }
 
   .hero .highlight {
-    font-size: 24px; /* تصغير الخط في الـ Hero */
+    font-size: 24px; 
   }
 
   .buttons .btn {
-    font-size: 14px; /* تصغير حجم الخط في الأزرار */
-    padding: 10px 15px; /* تقليص الـ padding للأزرار */
+    font-size: 14px; 
+    padding: 10px 15px; 
   }
 
-  /* تكبير حجم الأيقونات على الموبايل */
   .social-links a {
-    font-size: 20px; /* حجم أصغر على الموبايل */
+    font-size: 20px; 
   }
 
   footer p {
-    font-size: 10px; /* تصغير الخط في الفوتر */
+    font-size: 10px; 
   }
 }
 
 /* الـ Media Query للأجهزة التي تقل عن 480px (أجهزة الجوال الصغيرة) */
 @media screen and (max-width: 480px) {
   .toolbar nav ul li a {
-    font-size: 12px; /* تقليص حجم النص أكثر */
+    font-size: 12px; 
   }
 
   .hero .highlight {
-    font-size: 20px; /* تصغير الخط في الـ Hero */
+    font-size: 20px; 
   }
 
   .btn {
-    font-size: 12px; /* تصغير حجم الخط في الأزرار */
-    padding: 8px 14px; /* تقليص الـ padding */
+    font-size: 12px; 
+    padding: 8px 14px; 
   }
 
   .project-card img {
-    width: 70%; /* تصغير الصورة أكثر */
+    width: 70%; 
   }
 }
