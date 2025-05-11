@@ -15,82 +15,83 @@ body {
   cursor: default;
 }
 
-/* التولبار يكون ثابتًا في أعلى الصفحة /* التولبار يكون ثابتًا في أعلى الصفحة *//* التولبار يكون ثابتًا في أعلى الصفحة مع مسافة صغيرة بينه وبين الـ Hero */
+/* Toolbar Styling */
 .toolbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* الخلفية شفافة قليلاً */
-  padding: 15px 0;
-  z-index: 10;
-  border-radius: 10px; /* الكورنر */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* المسافة بين التولبار و الـ Hero */
+  position: fixed;
+  top: 5%; /* التولبار سيظهر في المنتصف العمودي */
+  left: 50%;
+  transform: translateX(-50%); /* لتحريك التولبار تمامًا في المنتصف */
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px; /* حواف مدورة */
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .toolbar nav ul {
-  list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 0;
-}
-
-.toolbar nav ul li {
-  display: inline;
+  justify-content: flex-start; /* التوزيع من اليمين لليسار */
+  gap: 20px;
+  list-style: none;
 }
 
 .toolbar nav ul li a {
-  color: white;
   text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
+  color: white;
   font-size: 16px;
-  padding: 10px 20px;
-  display: block;
+  font-weight: 500;
+  padding: 8px 15px;
+  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
   border-radius: 5px;
 }
 
 .toolbar nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  color: #452358;
+  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px #452358;
+  animation: popIn 0.5s ease-out forwards; /* تأثير الانبثاق */
 }
 
-/* قسم Hero الكامل مع الصورة الخلفية */
-.hero-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-image: url('your-image-path.jpg'); /* استبدل هذا بالمسار الصحيح لصورة الخلفية */
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
-  border-radius: 20px; /* الكورنر */
+/* أنيميشن الانبثاق */
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
+/* Hero Section */
 .hero {
-  padding-top: 100px; /* إعطاء مسافة للتولبار */
-  color: white;
+  height: 100vh;
+  background: linear-gradient(120deg, #15041acc, rgba(112, 48, 124, 0.8)); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-}
-
-.hero .hero-content {
-  z-index: 2;
   position: relative;
-  padding-top: 80px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
 }
 
-.hero .profile-image {
-  margin-bottom: 30px;
-  margin-top: -100px;
+.hero-content {
+  color: white;
+  z-index: 2;
 }
 
-.hero .profile-image img {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border: 5px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.hero .highlight {
+  color: #7d469c;
+  text-shadow: 0 0 5px #452358, 0 0 10px #452358, 0 0 15px #452358;
 }
 
 .buttons {
@@ -113,8 +114,8 @@ body {
 /* تأثير الانبثاق عند المرور على البوتن */
 .btn:hover {
   transform: scale(1.1);
-  animation: popIn 0.5s ease-out forwards;
-  box-shadow: 0 0 20px #452358, 0 0 30px #452358;
+  animation: popIn 0.5s ease-out forwards; /* تأثير الانبثاق */
+  box-shadow: 0 0 20px #452358, 0 0 30px #452358; /* تكبير الظل */
 }
 
 /* زر شفاف */
@@ -125,9 +126,11 @@ body {
 
 /* بقية الأقسام */
 #about {
-  padding-bottom: 30px;
   padding: 60px 20px;
+  background: transparent;
+  color: white;
   text-align: center;
+  border-radius: 20px;
 }
 
 #skills {
@@ -139,13 +142,13 @@ body {
 }
 
 .skills-container {
+  padding-top: 25px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .skill {
-  margin-bottom: 20px;
   background: #444;
   padding: 15px;
   border-radius: 10px;
@@ -189,11 +192,11 @@ body {
 .social-links .btn {
   background: #452358;
   color: #ffffff;
-  padding: 8px 16px; 
+  padding: 8px 16px; /* تقليص حجم padding */
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 14px; /* تصغير حجم الخط */
 }
 
 .social-links .btn:hover {
@@ -216,15 +219,15 @@ body {
   transition: transform 0.3s ease-in-out;
   width: 90%;
   max-width: 300px;
-  text-align: center;
+  text-align: center; /* محاذاة الصور في المنتصف */
 }
 
 .project-card img {
-  width: 60%;
+  width: 60%; /* تصغير حجم الصورة أكثر */
   height: auto;
   border-radius: 10px;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto; /* لضمان تمركز الصورة في منتصف الكارد */
 }
 
 .project-card:hover {
@@ -248,28 +251,28 @@ body {
 }
 
 .social-links a {
-    font-size: 30px; 
-    color: white; 
+    font-size: 30px; /* تكبير الأيقونات */
+    color: white; /* اللون الافتراضي */
     transition: transform 0.3s, color 0.3s;
 }
 
 .social-links a:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2); /* تكبير الأيقونة عند التمرير */
 }
 
 /* Instagram */
 .social-links .instagram {
-    color: #E4405F; 
+    color: #E4405F; /* اللون الواقعي لإنستجرام */
 }
 
 /* Facebook */
 .social-links .facebook {
-    color: #3b5998; 
+    color: #3b5998; /* اللون الواقعي لفيسبوك */
 }
 
 /* X (تويتر سابقًا) */
 .social-links .x {
-    color: #1d9bf0; 
+    color: #1d9bf0; /* اللون الواقعي لX */
 }
 
 footer {
@@ -290,67 +293,67 @@ footer p {
 /* الـ Media Query للأجهزة الصغيرة (أقل من 768px) */
 @media screen and (max-width: 768px) {
   .toolbar nav ul {
-    flex-direction: row; 
-    justify-content: center; 
-    gap: 10px; 
+    flex-direction: column; /* جعل العناصر تظهر عموديًا */
+    gap: 15px; /* تقليل المسافة بين العناصر */
   }
 
   .toolbar nav ul li a {
-    font-size: 14px; 
-    padding: 8px 15px; 
+    font-size: 14px; /* تقليص حجم الخط على الموبايل */
+    padding: 10px 20px; /* زيادة المسافة الداخلية للأزرار */
   }
 
   .skills-container {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr; /* جعل الـ Skills تظهر في عمود واحد */
   }
 
   .project-card {
-    width: 100%; 
+    width: 100%; /* جعل الكاردات تأخذ عرض الشاشة بالكامل */
   }
 
   .social-links {
-    gap: 10px; 
+    gap: 10px; /* تقليص المسافة بين الأيقونات */
   }
 
+  /* يمكن تقليص الـ Hero Section للتناسب مع حجم الشاشة */
   .hero {
-    height: auto; 
-    padding: 50px 10px; 
+    height: auto; /* تقليص ارتفاع الـ Hero على الشاشات الصغيرة */
+    padding: 50px 10px; /* تقليل المسافة الداخلية */
   }
 
   .hero .highlight {
-    font-size: 24px; 
+    font-size: 24px; /* تصغير الخط في الـ Hero */
   }
 
   .buttons .btn {
-    font-size: 14px; 
-    padding: 10px 15px; 
-  }
-
-  .social-links a {
-    font-size: 20px; 
-  }
-
-  footer p {
-    font-size: 10px; 
-  }
+    font-size: 14px; /* تصغير حجم الخط
+في الأزرار /
+padding: 10px 15px; / تقليص الـ padding للأزرار */
 }
 
-/* الـ Media Query للأجهزة التي تقل عن 480px (أجهزة الجوال الصغيرة) */
+/* تكبير حجم الأيقونات على الموبايل /
+.social-links a {
+font-size: 20px; / حجم أصغر على الموبايل */
+}
+
+footer p {
+font-size: 10px; /* تصغير الخط في الفوتر */
+}
+
+/* الـ Media Query للأجهزة التي تقل عن 480px (أجهزة الجوال الصغيرة) /
 @media screen and (max-width: 480px) {
-  .toolbar nav ul li a {
-    font-size: 12px; 
-  }
+.toolbar nav ul li a {
+font-size: 12px; / تقليص حجم النص أكثر */
 
-  .hero .highlight {
-    font-size: 20px; 
-  }
 
-  .btn {
-    font-size: 12px; 
-    padding: 8px 14px; 
-  }
+.hero .highlight {
+font-size: 20px; /* تصغير الخط في الـ Hero */
+}
 
-  .project-card img {
-    width: 70%; 
-  }
+.btn {
+font-size: 12px; /* تصغير حجم الخط في الأزرار /
+padding: 8px 14px; / تقليص الـ padding */
+}
+
+.project-card img {
+width: 70%; /* تصغير الصورة أكثر */
 }
