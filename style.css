@@ -31,12 +31,12 @@ body {
   width: auto;
   max-width: 100%;
   box-sizing: border-box;
-  flex-wrap: wrap; /* للسماح بتوزيع الأزرار بشكل أفقي أو عمودي حسب المساحة */
+  flex-wrap: wrap; /* السماح بتوزيع الأزرار بشكل أفقي أو عمودي حسب المساحة */
 }
 
 .toolbar nav ul {
   display: flex;
-  justify-content: flex-start; /* التوزيع من اليمين لليسار */
+  justify-content: center; /* التأكد من توزيع الأزرار بشكل جيد */
   gap: 20px;
   list-style: none;
   flex-wrap: wrap; /* السماح بلف الأزرار على الشاشات الصغيرة */
@@ -57,8 +57,9 @@ body {
   transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
   border-radius: 5px;
   display: inline-block; /* لضمان التفاعل مع كامل الزر */
-  width: auto;
+  width: 100%;
   cursor: pointer; /* لضمان التفاعل مع كامل المساحة */
+  pointer-events: auto; /* للتأكد من التفاعل مع الزر */
 }
 
 .toolbar nav ul li a:hover {
@@ -323,7 +324,7 @@ footer p {
   /* يمكن تقليص الـ Hero Section للتناسب مع حجم الشاشة */
   .hero {
     height: auto; /* تقليص ارتفاع الـ Hero على الشاشات الصغيرة */
-    padding: 50px 10px; /* تقليل المسافة الداخلية */
+    padding: 50px 10px; /* تقليلي المسافة الداخلية */
   }
 
   .hero .highlight {
