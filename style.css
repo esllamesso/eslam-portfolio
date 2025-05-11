@@ -17,21 +17,25 @@ body {
 
 /* Toolbar Styling */
 .toolbar {
-  position: fixed;
-  top: 5%; /* التولبار سيظهر في المنتصف العمودي */
-  left: 50%;
-  transform: translateX(-50%); /* لتحريك التولبار تمامًا في المنتصف */
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 100;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 20px; /* حواف مدورة */
-  padding: 10px 30px;
-  display: flex;
-  justify-content: center;
-  width: auto;
-  max-width: 100%;
-  box-sizing: border-box;
+
+background: rgba(0, 0, 0, 0.3); /* خلفية شفافة */
+backdrop-filter: blur(10px); /* تأثير بلور */
+border-radius: 30px; /* زوايا دائرية */
+padding: 10px 20px; /* مسافات داخلية */
+margin: 20px auto; /* مسافات خارجية وتوسيط */
+max-width: 90%; /* تحديد العرض الأقصى */
+position: relative;
+justify-content: center; /* تموضع نسبي */
+z-index: 10; 
+
+/* إضافة هذه الخصائص لتوسيط المحتوى */
+display: flex;
+align-items: center; /* لتوسيط المحتوى عموديًا */
+justify-content: center; /* لتوسيط المحتوى أفقيًا */
+text-align: center; /* لتوسيط النص */
+
 }
+ 
 
 .toolbar nav ul {
   display: flex;
