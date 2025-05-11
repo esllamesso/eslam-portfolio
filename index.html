@@ -11,88 +11,66 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
+  <!-- تولبار ثابت في أعلى الصفحة -->
   <header class="toolbar">
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#links">Links</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header class="toolbar">
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#links">Links</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<header class="hero" data-aos="fade-in" data-aos-duration="1500">
-  <div class="overlay" style="background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
-  <div class="hero-content" style="padding-top: 80px; position: relative; z-index: 2;">
-    <div class="profile-image" style="text-align: center; margin-bottom: 30px; margin-top: -100px;">
-      <img src="https://raw.githubusercontent.com/esllamesso/images/main/images/WhatsApp%20Image%202025-05-03%20at%2014.53.41_f31f2831.jpg" alt="Eslam Mohamed" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 5px solid rgba(255, 255, 255, 0.8); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+  <!-- قسم Hero -->
+  <header class="hero" data-aos="fade-in" data-aos-duration="1500">
+    <div class="overlay" style="background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+    <div class="hero-content" style="padding-top: 80px; position: relative; z-index: 2;">
+      <div class="profile-image" style="text-align: center; margin-bottom: 30px; margin-top: -100px;">
+        <img src="https://raw.githubusercontent.com/esllamesso/images/main/images/WhatsApp%20Image%202025-05-03%20at%2014.53.41_f31f2831.jpg" alt="Eslam Mohamed" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 5px solid rgba(255, 255, 255, 0.8); box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+      </div>
+      <h1>Hi, I'm <span class="highlight">Eslam Mohamed</span></h1>
+      <h2><span id="typed"></span></h2>
+      <div class="buttons" style="margin-top: 20px;">
+        <a href="#portfolio" class="btn">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
     </div>
-    <h1>Hi, I'm <span class="highlight">Eslam Mohamed</span></h1>
-    <h2><span id="typed"></span></h2>
-    <div class="buttons" style="margin-top: 20px;">
-      <a href="#portfolio" class="btn">View My Work</a>
-      <a href="#contact" class="btn btn-outline">Contact Me</a>
-    </div>
-  </div>
-</header>
-
-
-
-
-
-
-
+  </header>
 
   <section id="about" data-aos="fade-up" data-aos-duration="1000">
     <h2>About Me</h2>
     <p>I am a skilled mobile app developer proficient in Flutter and Java, with a strong background in UI design. I specialize in creating responsive and elegant user interfaces that enhance user experience and engagement.</p>
   </section>
 
-  <!-- تأكد من إضافة رابط Font Awesome في رأس الصفحة -->
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-
-<section id="skills" data-aos="fade-up" data-aos-duration="1000">
-  <h2>My Skills</h2>
-  <div class="skills-container">
-    <div class="skill">
-      <h3><i class="fas fa-mobile-alt"></i> Flutter</h3>
-      <div class="progress-bar" style="width: 80%; background-color: #007bff;">
-        <span class="progress-text">80%</span>
+  <section id="skills" data-aos="fade-up" data-aos-duration="1000">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <h3><i class="fas fa-mobile-alt"></i> Flutter</h3>
+        <div class="progress-bar" style="width: 80%; background-color: #007bff;">
+          <span class="progress-text">80%</span>
+        </div>
+      </div>
+      <div class="skill">
+        <h3><i class="fas fa-paint-brush"></i> UI Design</h3>
+        <div class="progress-bar" style="width: 70%; background-color: #ff4d4d;">
+          <span class="progress-text">70%</span>
+        </div>
+      </div>
+      <div class="skill">
+        <h3><i class="fab fa-java"></i> Java</h3>
+        <div class="progress-bar" style="width: 60%; background-color: #ff7f00;">
+          <span class="progress-text">60%</span>
+        </div>
       </div>
     </div>
-    <div class="skill">
-      <h3><i class="fas fa-paint-brush"></i> UI Design</h3>
-      <div class="progress-bar" style="width: 70%; background-color: #ff4d4d;">
-        <span class="progress-text">70%</span>
-      </div>
-    </div>
-    <div class="skill">
-      <h3><i class="fab fa-java"></i> Java</h3>
-      <div class="progress-bar" style="width: 60%; background-color: #ff7f00;">
-        <span class="progress-text">60%</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+  </section>
 
   <section id="links" data-aos="fade-up" data-aos-duration="1000">
-    <h2 style="text-align: center; margin-bottom: 40px;">My links</h2>    <div class="social-links">
+    <h2 style="text-align: center; margin-bottom: 40px;">My links</h2>
+    <div class="social-links">
       <a href="https://github.com/esllamesso" target="_blank" class="btn">GitHub</a>
       <a href="https://www.linkedin.com/in/eslam-mohamed-9ba442297?trk=contact-info" target="_blank" class="btn">LinkedIn</a>
       <a href="https://www.freelancer.com/u/esllameso?sb=t" class="btn">Freelancer</a>
@@ -102,40 +80,37 @@
   <section id="portfolio" data-aos="fade-up" data-aos-duration="1000">
     <h2 style="text-align: center; margin-bottom: 40px;">My Works</h2>
     <div class="projects">
-        <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" style="margin-top: 40px;">
-            <img src="https://raw.githubusercontent.com/esllamesso/images/main/images/library.png" alt="Library App">
-            <h3>Library App</h3>
-            <p>A mobile application for managing library books.</p>
-        </div>
-        <a href="https://github.com/esllamesso/MotatweraLibrary" target="_blank" class="btn" style="display: block; margin-top: 10px;">View Code</a>
+      <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" style="margin-top: 40px;">
+        <img src="https://raw.githubusercontent.com/esllamesso/images/main/images/library.png" alt="Library App">
+        <h3>Library App</h3>
+        <p>A mobile application for managing library books.</p>
+      </div>
+      <a href="https://github.com/esllamesso/MotatweraLibrary" target="_blank" class="btn" style="display: block; margin-top: 10px;">View Code</a>
 
-        <div class="project-card" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="https://raw.githubusercontent.com/esllamesso/images/main/images/gameso.png" alt="Gaming Community">
-            <h3>Gaming Community</h3>
-            <p>A platform for gaming mods and save data sharing.</p>
-        </div>
-        <a href="https://github.com/esllamesso/GameEso-UI" target="_blank" class="btn" style="display: block; margin-top: 10px;">View Design</a>
+      <div class="project-card" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="https://raw.githubusercontent.com/esllamesso/images/main/images/gameso.png" alt="Gaming Community">
+        <h3>Gaming Community</h3>
+        <p>A platform for gaming mods and save data sharing.</p>
+      </div>
+      <a href="https://github.com/esllamesso/GameEso-UI" target="_blank" class="btn" style="display: block; margin-top: 10px;">View Design</a>
 
-        <div class="project-card" data-aos="zoom-in" data-aos-duration="1000">
-            <img src="https://raw.githubusercontent.com/esllamesso/images/main/images/library.png" alt="UI Design">
-            <h3>UI Design for Library App</h3>
-            <p>User interface design focusing on clarity and UX.</p>
-        </div>
-        <a href="https://github.com/esllamesso/university-library-ui" target="_blank" class="btn" style="display: block; margin-top: 10px;">View Design</a>
+      <div class="project-card" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="https://raw.githubusercontent.com/esllamesso/images/main/images/library.png" alt="UI Design">
+        <h3>UI Design for Library App</h3>
+        <p>User interface design focusing on clarity and UX.</p>
+      </div>
+      <a href="https://github.com/esllamesso/university-library-ui" target="_blank" class="btn" style="display: block; margin-top: 10px;">View Design</a>
     </div>
-</section>
+  </section>
 
-
- <section id="contact" data-aos="fade-up" data-aos-duration="1000">
+  <section id="contact" data-aos="fade-up" data-aos-duration="1000">
     <h2>Contact Me</h2>
     <div class="social-links">
-        <a href="https://www.instagram.com/esllameso/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100024109973740" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
-        <a href="https://x.com/esllamesso" target="_blank" class="x"><i class="fab fa-x"></i></a>
+      <a href="https://www.instagram.com/esllameso/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100024109973740" target="_blank" class="facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://x.com/esllamesso" target="_blank" class="x"><i class="fab fa-x"></i></a>
     </div>
-</section>
-
-
+  </section>
 
   <footer data-aos="fade-in" data-aos-duration="1000">
     <p>Designed & Built by Eslam Mohamed</p>
