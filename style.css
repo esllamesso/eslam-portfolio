@@ -24,12 +24,12 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 100;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 20px; /* حواف مدورة */
+  border-radius: 20px;
   padding: 15px 30px;
   display: flex;
   justify-content: center;
-  width: auto;
-  max-width: 100%;
+  width: 90%; /* عرض 90% على الموبايل */
+  max-width: 400px; /* الحد الأقصى للعرض */
   box-sizing: border-box;
   flex-wrap: wrap;
 }
@@ -37,7 +37,7 @@ body {
 .toolbar nav ul {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px; /* تقليل المسافة بين الأزرار */
   list-style: none;
   flex-wrap: wrap;
   padding: 0;
@@ -53,13 +53,12 @@ body {
   color: white;
   font-size: 16px;
   font-weight: 500;
-  padding: 10px 25px; /* زيادة المسافة الداخلية */
+  padding: 10px 25px; /* تأكيد المسافة الداخلية حول النص */
   transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
   border-radius: 5px;
   display: inline-block;
   cursor: pointer;
-  width: 100%;
-  pointer-events: auto; /* التأكد من التفاعل مع الزر */
+  width: auto; /* التأكد من أن الأزرار قابلة للضغط بشكل كامل */
 }
 
 .toolbar nav ul li a:hover {
@@ -301,12 +300,12 @@ footer p {
   .toolbar nav ul {
     flex-direction: row; /* جعل العناصر في صف واحد */
     justify-content: center; /* التأكد من توزيع الأزرار بشكل جيد */
-    gap: 15px; /* تقليل المسافة بين العناصر */
+    gap: 10px; /* تقليل المسافة بين العناصر */
   }
 
   .toolbar nav ul li a {
     font-size: 14px; /* تقليص حجم الخط على الموبايل */
-    padding: 10px 20px; /* زيادة المسافة الداخلية للأزرار */
+    padding: 8px 15px; /* تقليص المسافة الداخلية للأزرار */
   }
 
   .skills-container {
