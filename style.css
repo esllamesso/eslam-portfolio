@@ -58,13 +58,14 @@ body {
 /* قسم Hero الكامل مع الصورة الخلفية */
 .hero-container {
   position: relative;
+  padding-rop: 20px;
   width: 100%;
   height: 100vh;
   background-image: url('your-image-path.jpg'); /* استبدل هذا بالمسار الصحيح لصورة الخلفية */
   background-size: cover;
   background-position: center;
   z-index: 1;
-  border-radius: 10px; /* الكورنر */
+  border-radius: 20px; /* الكورنر */
 }
 
 .hero {
