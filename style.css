@@ -15,7 +15,7 @@ body {
   cursor: default;
 }
 
-/* التولبار يكون ثابتًا في أعلى الصفحة /* التولبار يكون ثابتًا في أعلى الصفحة */
+/* التولبار يكون ثابتًا في أعلى الصفحة /* التولبار يكون ثابتًا في أعلى الصفحة *//* التولبار يكون ثابتًا في أعلى الصفحة مع مسافة صغيرة بينه وبين الـ Hero */
 .toolbar {
   position: sticky;
   top: 0;
@@ -23,8 +23,9 @@ body {
   background-color: rgba(0, 0, 0, 0.7); /* الخلفية شفافة قليلاً */
   padding: 15px 0;
   z-index: 10;
-  border-radius: 10px; /* للكورنر */
+  border-radius: 10px; /* الكورنر */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* المسافة بين التولبار و الـ Hero */
 }
 
 .toolbar nav ul {
@@ -63,6 +64,7 @@ body {
   background-size: cover;
   background-position: center;
   z-index: 1;
+  border-radius: 10px; /* الكورنر */
 }
 
 .hero {
