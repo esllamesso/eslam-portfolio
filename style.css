@@ -146,6 +146,7 @@ body {
 }
 
 .skill {
+  margin-bottom: 20px;
   background: #444;
   padding: 15px;
   border-radius: 10px;
