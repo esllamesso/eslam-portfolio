@@ -31,6 +31,7 @@ body {
   width: auto;
   max-width: 100%;
   box-sizing: border-box;
+  flex-wrap: wrap; /* للسماح بتوزيع الأزرار بشكل أفقي أو عمودي حسب المساحة */
 }
 
 .toolbar nav ul {
@@ -38,6 +39,13 @@ body {
   justify-content: flex-start; /* التوزيع من اليمين لليسار */
   gap: 20px;
   list-style: none;
+  flex-wrap: wrap; /* السماح بلف الأزرار على الشاشات الصغيرة */
+  padding: 0;
+  margin: 0;
+}
+
+.toolbar nav ul li {
+  display: inline-block;
 }
 
 .toolbar nav ul li a {
@@ -48,6 +56,9 @@ body {
   padding: 8px 15px;
   transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
   border-radius: 5px;
+  display: inline-block; /* لضمان التفاعل مع كامل الزر */
+  width: auto;
+  cursor: pointer; /* لضمان التفاعل مع كامل المساحة */
 }
 
 .toolbar nav ul li a:hover {
@@ -126,21 +137,17 @@ body {
 
 /* بقية الأقسام */
 #about {
-  padding-top: 25px;
   padding: 60px 20px;
   text-align: center;
 }
 
 #skills {
   padding: 60px 20px;
-  background: transparent;
+  background-color: transparent;
   color: white;
-  text-align: center;
-  border-radius: 20px;
 }
 
 .skills-container {
-  padding-top: 25px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
@@ -291,7 +298,8 @@ footer p {
 /* الـ Media Query للأجهزة الصغيرة (أقل من 768px) */
 @media screen and (max-width: 768px) {
   .toolbar nav ul {
-    flex-direction: column; /* جعل العناصر تظهر عموديًا */
+    flex-direction: row; /* جعل العناصر في صف واحد */
+    justify-content: center; /* التأكد من توزيع الأزرار بشكل جيد */
     gap: 15px; /* تقليل المسافة بين العناصر */
   }
 
@@ -323,35 +331,36 @@ footer p {
   }
 
   .buttons .btn {
-    font-size: 14px; /* تصغير حجم الخط
-في الأزرار /
-padding: 10px 15px; / تقليص الـ padding للأزرار */
+    font-size: 14px; /* تصغير حجم الخط في الأزرار */
+    padding: 10px 15px; /* تقليص الـ padding للأزرار */
+  }
+
+  /* تكبير حجم الأيقونات على الموبايل */
+  .social-links a {
+    font-size: 20px; /* حجم أصغر على الموبايل */
+  }
+
+  footer p {
+    font-size: 10px; /* تصغير الخط في الفوتر */
+  }
 }
 
-/* تكبير حجم الأيقونات على الموبايل /
-.social-links a {
-font-size: 20px; / حجم أصغر على الموبايل */
-}
-
-footer p {
-font-size: 10px; /* تصغير الخط في الفوتر */
-}
-
-/* الـ Media Query للأجهزة التي تقل عن 480px (أجهزة الجوال الصغيرة) /
+/* الـ Media Query للأجهزة التي تقل عن 480px (أجهزة الجوال الصغيرة) */
 @media screen and (max-width: 480px) {
-.toolbar nav ul li a {
-font-size: 12px; / تقليص حجم النص أكثر */
+  .toolbar nav ul li a {
+    font-size: 12px; /* تقليص حجم النص أكثر */
+  }
 
+  .hero .highlight {
+    font-size: 20px; /* تصغير الخط في الـ Hero */
+  }
 
-.hero .highlight {
-font-size: 20px; /* تصغير الخط في الـ Hero */
-}
+  .btn {
+    font-size: 12px; /* تصغير حجم الخط في الأزرار */
+    padding: 8px 14px; /* تقليص الـ padding */
+  }
 
-.btn {
-font-size: 12px; /* تصغير حجم الخط في الأزرار /
-padding: 8px 14px; / تقليص الـ padding */
-}
-
-.project-card img {
-width: 70%; /* تصغير الصورة أكثر */
+  .project-card img {
+    width: 70%; /* تصغير الصورة أكثر */
+  }
 }
