@@ -58,8 +58,7 @@ body {
 /* قسم Hero الكامل مع الصورة الخلفية */
 .hero-container {
   position: relative;
-  padding-top: 15px;
-  width: 97%;
+  width: 100%;
   height: 100vh;
   background-image: url('your-image-path.jpg'); /* استبدل هذا بالمسار الصحيح لصورة الخلفية */
   background-size: cover;
