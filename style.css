@@ -31,14 +31,13 @@ display: flex;
 align-items: center; /* لتوسيط المحتوى عموديًا */
 justify-content: center; /* لتوسيط المحتوى أفقيًا */
 text-align: center; /* لتوسيط النص */
-flex-direction: row; /* لضبط العناصر جنب بعض */
-flex-wrap: wrap; /* السماح بالعناصر أنها تلتف إذا كان العرض صغير */
+flex-direction: row; /* لتحديد أن العناصر تكون جنب بعض */
+flex-wrap: nowrap; /* عدم السماح للعناصر بالالتفاف تحت بعض */
 
 @media (max-width: 768px) { 
     /* عند الشاشات الصغيرة (مثل الموبايل) */
-    flex-direction: column; /* لجعل العناصر تكون تحت بعض في الموبايل */
+    flex-direction: row; /* التأكد من أن العناصر تظل جنب بعض حتى على الموبايل */
 }
-
 
 }
  
