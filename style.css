@@ -126,6 +126,7 @@ body {
 
 /* بقية الأقسام */
 #about {
+  padding-bottom: 20px;
   padding: 60px 20px;
   text-align: center;
 }
@@ -134,6 +135,7 @@ body {
   padding: 60px 20px;
   background-color: transparent;
   color: white;
+  text-align: center;
 }
 
 .skills-container {
