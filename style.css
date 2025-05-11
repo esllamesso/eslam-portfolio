@@ -15,91 +15,64 @@ body {
   cursor: default;
 }
 
-/* Toolbar Styling */
+/* التولبار يكون ثابتًا في أعلى الصفحة */
 .toolbar {
-  position: fixed;
-  top: 0; /* تغيير المكان إلى أعلى الصفحة */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 100;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: center;
-  width: 90%;
-  max-width: 400px; 
-  box-sizing: border-box;
-  flex-wrap: wrap;
-  top: 5%;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* الخلفية شفافة قليلاً */
+  padding: 15px 0;
+  z-index: 10;
+  border-radius: 10px; /* للكورنر */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .toolbar nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  list-style: none;
-  flex-wrap: wrap;
-  padding: 0;
+  gap: 30px;
   margin: 0;
 }
 
 .toolbar nav ul li {
-  display: inline-block;
+  display: inline;
 }
 
 .toolbar nav ul li a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
   font-size: 16px;
-  font-weight: 500;
-  padding: 10px 25px; 
-  transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
+  padding: 10px 20px;
+  display: block;
   border-radius: 5px;
-  display: inline-block;
-  cursor: pointer;
-  width: auto;
 }
 
 .toolbar nav ul li a:hover {
-  color: #452358;
-  transform: scale(1.1);
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 15px #452358;
-  animation: popIn 0.5s ease-out forwards;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* أنيميشن الانبثاق */
-@keyframes popIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* Hero Section */
+/* تعديل قسم Hero ليكون أسفل التولبار */
 .hero {
+  padding-top: 100px; /* إعطاء مسافة للتولبار */
+  background-image: url('your-image-path.jpg');
+  background-size: cover;
+  background-position: center;
   height: 100vh;
-  background: linear-gradient(120deg, #15041acc, rgba(112, 48, 124, 0.8)); 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  position: relative;
-  padding: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
 }
 
-.hero-content {
-  color: white;
+.hero .hero-content {
   z-index: 2;
+  color: white;
 }
+
+/* باقي التصميم كما هو */
 
 .hero .highlight {
   color: #7d469c;
