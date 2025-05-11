@@ -18,28 +18,28 @@ body {
 /* Toolbar Styling */
 .toolbar {
   position: fixed;
-  top: 5%; /* التولبار سيظهر في المنتصف العمودي */
+  top: 5%;
   left: 50%;
-  transform: translateX(-50%); /* لتحريك التولبار تمامًا في المنتصف */
+  transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 100;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   border-radius: 20px; /* حواف مدورة */
-  padding: 10px 30px;
+  padding: 15px 30px;
   display: flex;
   justify-content: center;
   width: auto;
   max-width: 100%;
   box-sizing: border-box;
-  flex-wrap: wrap; /* السماح بتوزيع الأزرار بشكل أفقي أو عمودي حسب المساحة */
+  flex-wrap: wrap;
 }
 
 .toolbar nav ul {
   display: flex;
-  justify-content: center; /* التأكد من توزيع الأزرار بشكل جيد */
+  justify-content: center;
   gap: 20px;
   list-style: none;
-  flex-wrap: wrap; /* السماح بلف الأزرار على الشاشات الصغيرة */
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
 }
@@ -53,13 +53,13 @@ body {
   color: white;
   font-size: 16px;
   font-weight: 500;
-  padding: 8px 15px;
+  padding: 10px 25px; /* زيادة المسافة الداخلية */
   transition: color 0.3s, transform 0.3s, box-shadow 0.3s;
   border-radius: 5px;
-  display: inline-block; /* لضمان التفاعل مع كامل الزر */
+  display: inline-block;
+  cursor: pointer;
   width: 100%;
-  cursor: pointer; /* لضمان التفاعل مع كامل المساحة */
-  pointer-events: auto; /* للتأكد من التفاعل مع الزر */
+  pointer-events: auto; /* التأكد من التفاعل مع الزر */
 }
 
 .toolbar nav ul li a:hover {
@@ -67,7 +67,7 @@ body {
   transform: scale(1.1);
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 15px #452358;
-  animation: popIn 0.5s ease-out forwards; /* تأثير الانبثاق */
+  animation: popIn 0.5s ease-out forwards;
 }
 
 /* أنيميشن الانبثاق */
@@ -126,8 +126,8 @@ body {
 /* تأثير الانبثاق عند المرور على البوتن */
 .btn:hover {
   transform: scale(1.1);
-  animation: popIn 0.5s ease-out forwards; /* تأثير الانبثاق */
-  box-shadow: 0 0 20px #452358, 0 0 30px #452358; /* تكبير الظل */
+  animation: popIn 0.5s ease-out forwards;
+  box-shadow: 0 0 20px #452358, 0 0 30px #452358;
 }
 
 /* زر شفاف */
@@ -225,15 +225,15 @@ body {
   transition: transform 0.3s ease-in-out;
   width: 90%;
   max-width: 300px;
-  text-align: center; /* محاذاة الصور في المنتصف */
+  text-align: center;
 }
 
 .project-card img {
-  width: 60%; /* تصغير حجم الصورة أكثر */
+  width: 60%;
   height: auto;
   border-radius: 10px;
   display: block;
-  margin: 0 auto; /* لضمان تمركز الصورة في منتصف الكارد */
+  margin: 0 auto;
 }
 
 .project-card:hover {
